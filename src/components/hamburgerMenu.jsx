@@ -9,8 +9,8 @@ const Hamburger = () => {
 
   return (
     <div className="hamburger" onClick={() => setOpen(!open)}>
-        <i className="material-symbols-outlined right-[1rem] top-[1rem] fixed cursor-pointer">{`${open ? 'menu_open' : 'menu'}`}</i>
-    <div className="dropdown-menu rounded-lg backdrop-blur-sm">
+        <i className={`material-symbols-outlined right-[1rem] top-[1rem] fixed cursor-pointer ${open ? 'rounded-lg backdrop-blur-sm' : '"'}`}>{`${open ? 'menu_open' : 'menu'}`}</i>
+    <div className="dropdown-menu">
       <ul className={`transition-all duration-[.5s] ease-in-expo ${open ? 'h-[292px]' : 'h-0'}`}>
           <li><Link to="cars" spy={true} smooth={true} offset={-50} duration={500} className="navbar-button text-xs sm:text-xs lg:text-sm">Cars</Link></li>
           <li><Link to="history" spy={true} smooth={true} offset={-50} duration={500} className="navbar-button text-xs sm:text-xs lg:text-sm">History</Link></li>
